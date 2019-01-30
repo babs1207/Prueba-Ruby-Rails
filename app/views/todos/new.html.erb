@@ -2,5 +2,5 @@
 <%= form_with model: @todo, local: true do |form| %>
   <%= form.label :description %>
   <%= form.text_field :description %>
-  <%= form.submit 'Enviar' %>
+  <%= form.submit 'Enviar', class:"btn btn-primary" %>
 <% end %>

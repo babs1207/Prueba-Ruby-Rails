@@ -4,7 +4,7 @@
         <h3> ToDo Not Complete</h3>
          <% @todos_not.each do |todo| %>
              <ul>
-              <li><%= todo.completed %></li>
+              <li><%= todo.description %></li>
             </ul>
          <% end %>
       </div>
@@ -12,7 +12,7 @@
         <h3> ToDo Completed</h3>
           <% @todos.each do |todo| %>
             <ul>
-              <li><%= todo.completed %></li>
+              <li><%= todo.description %></li>
             </ul>
           <% end %>
       </div>

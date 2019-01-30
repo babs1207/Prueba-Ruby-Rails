@@ -1,7 +1,10 @@
 <h1>Index</h1>
+<% if notice.present? %>
+  <%= notice %>
+<% end %>
 <% @todos.each do |todo| %>
   <ul class="list-group">
-    <li class="list-group-item"><%= todo.description %>-<%= link_to "Completed", update_todo_path(todo), method: :patch %>-<%= link_to "Show", todo_path(todo) %>-<%= link_to "Edit", edit_todo_path(todo) %>-<%= link_to "Destroy", todo_path(todo), method: :delete %></li>
+    <li class="list-group-item"><%= todo.description %>----><%= link_to "Completed", update_todo_path(todo), method: :patch, class:"btn btn-primary" %><%= link_to "Show", todo_path(todo), class:"btn btn-info" %><%= link_to "Edit", edit_todo_path(todo), class:"btn btn-success" %><%= link_to "Destroy", todo_path(todo), method: :delete, data: {confirm: 'Estas seguro'}, class:"btn btn-danger" %></li>
   </ul>
 <% end %>
 
