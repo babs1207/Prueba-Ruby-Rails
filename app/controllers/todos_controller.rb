@@ -41,7 +41,8 @@ class TodosController < ApplicationController
   end
 
   def list
-    @todos = Todo.all
+    @todos_not = Todo.where(completed: false)
+    @todos = Todo.where(completed: true)
   end
 
   private

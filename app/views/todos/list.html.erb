@@ -1,9 +1,8 @@
- 
  <div class="container">
   <div class="row">
       <div class="col-6">
         <h3> ToDo Not Complete</h3>
-         <% @todos.each do |todo| %>
+         <% @todos_not.each do |todo| %>
              <ul>
               <li><%= todo.completed %></li>
             </ul>
@@ -19,3 +18,4 @@
       </div>
     </div>
 </div>
+ 
