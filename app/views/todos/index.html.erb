@@ -1,0 +1,8 @@
+<h1>Index</h1>
+<% @todos.each do |todo| %>
+  <ul class="list-group">
+    <li class="list-group-item"><%= todo.description %>-Completed <%= todo.completed %>-  <%= link_to "Show", todo_path(todo) %></li>
+  </ul>
+<% end %>
+
+<%= link_to "Crear ToDo.", new_todo_path %>
