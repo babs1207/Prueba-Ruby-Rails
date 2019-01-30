@@ -1,7 +1,7 @@
 <h1>Index</h1>
 <% @todos.each do |todo| %>
   <ul class="list-group">
-    <li class="list-group-item"><%= todo.description %>-Completed <%= todo.completed %>-  <%= link_to "Show", todo_path(todo) %>-<%= link_to "Edit", edit_todo_path(todo) %>-<%= link_to "Destroy", todo_path(todo), method: :delete %></li>
+    <li class="list-group-item"><%= todo.description %>-<%= link_to "Completed", update_todo_path(todo), method: :patch %>-<%= link_to "Show", todo_path(todo) %>-<%= link_to "Edit", edit_todo_path(todo) %>-<%= link_to "Destroy", todo_path(todo), method: :delete %></li>
   </ul>
 <% end %>
 
