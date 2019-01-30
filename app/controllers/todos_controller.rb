@@ -40,6 +40,10 @@ class TodosController < ApplicationController
     redirect_to root_path
   end
 
+  def list
+    @todos = Todo.all
+  end
+
   private
   
   def todo_params

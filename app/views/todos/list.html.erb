@@ -1,0 +1,21 @@
+ 
+ <div class="container">
+  <div class="row">
+      <div class="col-6">
+        <h3> ToDo Not Complete</h3>
+         <% @todos.each do |todo| %>
+             <ul>
+              <li><%= todo.completed %></li>
+            </ul>
+         <% end %>
+      </div>
+      <div class="col-6">
+        <h3> ToDo Completed</h3>
+          <% @todos.each do |todo| %>
+            <ul>
+              <li><%= todo.completed %></li>
+            </ul>
+          <% end %>
+      </div>
+    </div>
+</div>
