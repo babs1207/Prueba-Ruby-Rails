@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'todos/new', as: 'new_todo'
   resources :todos, only: [:create]  
   get 'todos/:id', to: 'todos#show', as:'todo'
+  get 'todos/:id/edit', to:'todos#edit', as: 'edit_todo'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'todos#index'
